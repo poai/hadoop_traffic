@@ -163,10 +163,10 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 	public Integer granularity = 1;
 	public Integer windowSize = 3;
 
-	public Queue<Integer> queue = new LinkedBlockingQueue<Integer>();
+	public Queue<Integer> queue = new LinkedBlockingQueue<Integer>(windowSize+1);
 
 	SimpleDateFormat sdf;
-	
+
 	@Override
 	protected void setup(Reducer<CarAvgOrder, IntWritable, Text, Text>.Context context)
 			throws IOException, InterruptedException {
@@ -184,11 +184,21 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 		for (IntWritable lw : values) {
 			sum += lw.get();
 		}
-		String time=sdf.format(new Date(cao.getPassTime().get() * 60 * 1000));
-		mo.write(new Text(String.valueOf((time))), new Text(String.valueOf(sum)),
-				cao.getTgsid().toString());
+		String time = sdf.format(new Date(cao.getPassTime().get() * 60 * 1000));
+
+		// 计算移动平均
+		queue.add(sum);
+		if (queue.size() > windowSize) {
+			queue.poll();
+		}
+		sum = 0;
+		for (Integer item : queue) {
+			sum += item;
+		}
+		int movAvg = sum / windowSize;
+		mo.write(new Text(String.valueOf((time))), new Text(String.valueOf(movAvg)), cao.getTgsid().toString());
 	}
-	
+
 	@Override
 	protected void cleanup(Reducer<CarAvgOrder, IntWritable, Text, Text>.Context context)
 			throws IOException, InterruptedException {
@@ -260,7 +270,6 @@ class CarAvgComparator extends WritableComparator {
 		// 指定Key值
 		super(CarAvgOrder.class, true);
 	}
-
 	@SuppressWarnings("rawtypes")
 	@Override
 	public int compare(WritableComparable a, WritableComparable b) {
