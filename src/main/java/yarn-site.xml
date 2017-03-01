@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+<configuration>
+  <property>
+    <name>yarn.resourcemanager.ha.enabled</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.ha.rm-ids</name>
+    <value>rm1,rm2</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.hostname.rm1</name>
+    <value>host218</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.hostname.rm2</name>
+    <value>host223</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.recovery.enabled</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.store.class</name>
+    <value>org.apache.hadoop.yarn.server.resourcemanager.recovery.ZKRMStateStore</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.zk-address</name>
+    <value>host219:2181,host223:2181,host224:2181,host227:2181,host228:2181</value>
+    <description>For multiple zk services, separate them with comma</description>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.cluster-id</name>
+    <value>yarn-ha</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.webapp.address.rm1</name>
+    <value>host218:9026</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.webapp.address.rm2</name>
+    <value>host223:9026</value>
+  </property>
+
+  <property>
+    <description>The class to use as the resource scheduler.</description>
+    <name>yarn.resourcemanager.scheduler.class</name>
+    <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler</value>
+  </property>
+
+  <property>
+    <description>fair-scheduler conf location</description>
+    <name>yarn.scheduler.fair.allocation.file</name>
+    <value>/app/hadoop/etc/hadoop/fairscheduler.xml</value>
+  </property>
+
+  <property>
+    <description>
+      List of directories to store localized files in. An
+      application's localized file directory will be found in:
+      ${yarn.nodemanager.local-dirs}/usercache/${user}/appcache/application_${appid}.
+      Individual containers' work directories, called container_${contid}, will
+      be subdirectories of this.
+    </description>
+    <name>yarn.nodemanager.local-dirs</name>
+    <value>/app/hadoop/local</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.log-dirs</name>
+    <value>/app/hadoop/logs</value>
+  </property>
+
+  <property>
+    <description>Whether to enable log aggregation</description>
+    <name>yarn.log-aggregation-enable</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <description>Where to aggregate logs to.</description>
+    <name>yarn.nodemanager.remote-app-log-dir</name>
+    <value>/app/hadoop/logs</value>
+  </property>
+
+  <property>
+    <description>
+      Amount of physical memory, in MB, that can be allocated
+      for containers.
+    </description>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>10240</value>
+  </property>
+  <property>
+    <description>
+      Number of CPU cores that can be allocated
+      for containers.
+    </description>
+    <name>yarn.nodemanager.resource.cpu-vcores</name>
+    <value>2</value>
+  </property>
+  <property>
+      <name>yarn.scheduler.minimum-allocation-mb</name>
+	<value>1024</value>
+  </property>
+  <property>
+    <description>the valid service name should only contain a-zA-Z0-9_ and can not start with numbers</description>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.vmem-check-enabled</name>
+    <value>false</value>
+    <description>Whether virtual memory limits will be enforced for containers.</description>
+  </property>
+</configuration>

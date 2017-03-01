@@ -1,0 +1,464 @@
+2017-02-09 19:43:09  [ main:0 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, about=, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:43:09  [ main:15 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, about=, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:43:09  [ main:16 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, about=, type=DEFAULT, value=[GetGroups], valueName=Time)
+2017-02-09 19:43:09  [ main:18 ] - [ DEBUG ]  UgiMetrics, User and group related metrics
+2017-02-09 19:43:09  [ main:206 ] - [ DEBUG ]  Kerberos krb5 configuration not found, setting default realm to empty
+2017-02-09 19:43:09  [ main:210 ] - [ DEBUG ]   Creating new Groups object
+2017-02-09 19:43:09  [ main:213 ] - [ DEBUG ]  Trying to load the custom-built native-hadoop library...
+2017-02-09 19:43:09  [ main:219 ] - [ DEBUG ]  Loaded the native-hadoop library
+2017-02-09 19:43:09  [ main:220 ] - [ DEBUG ]  Using JniBasedUnixGroupsMapping for Group resolution
+2017-02-09 19:43:09  [ main:221 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMapping
+2017-02-09 19:43:09  [ main:229 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2017-02-09 19:43:09  [ main:239 ] - [ DEBUG ]  hadoop login
+2017-02-09 19:43:09  [ main:241 ] - [ DEBUG ]  hadoop login commit
+2017-02-09 19:43:09  [ main:249 ] - [ DEBUG ]  using local user:NTUserPrincipal: xiaofen
+2017-02-09 19:43:09  [ main:250 ] - [ DEBUG ]  Using user: "NTUserPrincipal: xiaofen" with name xiaofen
+2017-02-09 19:43:09  [ main:250 ] - [ DEBUG ]  User entry: "xiaofen"
+2017-02-09 19:43:09  [ main:253 ] - [ DEBUG ]  UGI loginUser:xiaofen (auth:SIMPLE)
+2017-02-09 19:43:10  [ main:450 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:43:10  [ main:450 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:43:10  [ main:450 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:43:10  [ main:450 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:43:10  [ main:465 ] - [ DEBUG ]  No KeyProvider found.
+2017-02-09 19:43:10  [ main:487 ] - [ DEBUG ]  No HA service delegation token found for logical URI hdfs://cluster1:8020
+2017-02-09 19:43:10  [ main:488 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:43:10  [ main:488 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:43:10  [ main:489 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:43:10  [ main:489 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:43:10  [ main:499 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:43:10  [ main:518 ] - [ DEBUG ]  rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@7b227d8d
+2017-02-09 19:43:10  [ main:801 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:43:22  [ main:12429 ] - [ DEBUG ]  Both short-circuit local reads and UNIX domain socket are disabled.
+2017-02-09 19:43:22  [ main:12440 ] - [ DEBUG ]  DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2017-02-09 19:43:22  [ main:12443 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.connect(Job.java:1261)
+2017-02-09 19:43:22  [ main:12454 ] - [ DEBUG ]  Trying ClientProtocolProvider : org.apache.hadoop.mapred.LocalClientProtocolProvider
+2017-02-09 19:43:22  [ main:12463 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-02-09 19:43:22  [ main:12465 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2017-02-09 19:43:22  [ main:12490 ] - [ DEBUG ]  Picked org.apache.hadoop.mapred.LocalClientProtocolProvider as the ClientProtocolProvider
+2017-02-09 19:43:22  [ main:12498 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Cluster.getFileSystem(Cluster.java:161)
+2017-02-09 19:43:22  [ main:12514 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+2017-02-09 19:43:22  [ main:12566 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:43:22  [ main:12569 ] - [ DEBUG ]  Connecting to host218/10.150.27.218:8020
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:12789 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen: starting, having connections 1
+2017-02-09 19:43:22  [ IPC Parameter Sending Thread #0:12794 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen sending #0
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:12809 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen got value #0
+2017-02-09 19:43:22  [ main:12822 ] - [ INFO ]  Exception while invoking getFileInfo of class ClientNamenodeProtocolTranslatorPB over host218/10.150.27.218:8020. Trying to fail over immediately.
+org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.ipc.StandbyException): Operation category READ is not supported in state standby
+	at org.apache.hadoop.hdfs.server.namenode.ha.StandbyState.checkOperation(StandbyState.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode$NameNodeHAContext.checkOperation(NameNode.java:1719)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkOperation(FSNamesystem.java:1350)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:4132)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getFileInfo(NameNodeRpcServer.java:838)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getFileInfo(ClientNamenodeProtocolServerSideTranslatorPB.java:821)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:962)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2039)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2035)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2033)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1468)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1399)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+	at com.sun.proxy.$Proxy9.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:752)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1988)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1400)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:145)
+	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:562)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:432)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1296)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1293)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1314)
+	at cn.com.zjf.MR_04.Car2.main(Car2.java:39)
+2017-02-09 19:43:22  [ main:12825 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:43:22  [ main:12825 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:43:22  [ main:12826 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:43:22  [ main:12826 ] - [ DEBUG ]  Connecting to host223/10.150.27.223:8020
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:12830 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen: starting, having connections 2
+2017-02-09 19:43:22  [ IPC Parameter Sending Thread #0:12830 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen sending #0
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:12832 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen got value #0
+2017-02-09 19:43:22  [ main:12833 ] - [ DEBUG ]  Call: getFileInfo took 7ms
+2017-02-09 19:43:22  [ main:12893 ] - [ DEBUG ]  Initialized cache for IDs to User/Group mapping with a  cache timeout of 14400 seconds.
+2017-02-09 19:43:22  [ main:12902 ] - [ DEBUG ]  Configuring job job_local1139367373_0001 with file:/data/hadoop/tmp/mapred/staging/xiaofen1139367373/.staging/job_local1139367373_0001 as the submit dir
+2017-02-09 19:43:22  [ main:12903 ] - [ DEBUG ]  adding the following namenodes' delegation tokens:[hdfs://cluster1:8020]
+2017-02-09 19:43:22  [ main:13128 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-02-09 19:43:22  [ main:13129 ] - [ DEBUG ]  default FileSystem: file:///
+2017-02-09 19:43:22  [ main:13132 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-02-09 19:43:22  [ main:13137 ] - [ DEBUG ]  Creating splits at file:/data/hadoop/tmp/mapred/staging/xiaofen1139367373/.staging/job_local1139367373_0001
+2017-02-09 19:43:22  [ main:13140 ] - [ INFO ]  Cleaning up the staging area file:/data/hadoop/tmp/mapred/staging/xiaofen1139367373/.staging/job_local1139367373_0001
+2017-02-09 19:43:22  [ Thread-1:13148 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:43:22  [ Thread-1:13148 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:43:22  [ Thread-1:13148 ] - [ DEBUG ]  removing client from cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:43:22  [ Thread-1:13149 ] - [ DEBUG ]  stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:43:22  [ Thread-1:13149 ] - [ DEBUG ]  Stopping client
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:13150 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen: closed
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:13150 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen: closed
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:13150 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen: stopped, remaining connections 0
+2017-02-09 19:43:22  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:13150 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen: stopped, remaining connections 0
+2017-02-09 19:50:11  [ main:0 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:50:11  [ main:12 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:50:11  [ main:13 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(sampleName=Ops, about=, always=false, type=DEFAULT, value=[GetGroups], valueName=Time)
+2017-02-09 19:50:11  [ main:15 ] - [ DEBUG ]  UgiMetrics, User and group related metrics
+2017-02-09 19:50:11  [ main:159 ] - [ DEBUG ]  Kerberos krb5 configuration not found, setting default realm to empty
+2017-02-09 19:50:11  [ main:166 ] - [ DEBUG ]   Creating new Groups object
+2017-02-09 19:50:11  [ main:170 ] - [ DEBUG ]  Trying to load the custom-built native-hadoop library...
+2017-02-09 19:50:11  [ main:174 ] - [ DEBUG ]  Loaded the native-hadoop library
+2017-02-09 19:50:11  [ main:176 ] - [ DEBUG ]  Using JniBasedUnixGroupsMapping for Group resolution
+2017-02-09 19:50:11  [ main:177 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMapping
+2017-02-09 19:50:11  [ main:187 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2017-02-09 19:50:11  [ main:201 ] - [ DEBUG ]  hadoop login
+2017-02-09 19:50:11  [ main:202 ] - [ DEBUG ]  hadoop login commit
+2017-02-09 19:50:11  [ main:211 ] - [ DEBUG ]  using local user:NTUserPrincipal: xiaofen
+2017-02-09 19:50:11  [ main:212 ] - [ DEBUG ]  Using user: "NTUserPrincipal: xiaofen" with name xiaofen
+2017-02-09 19:50:11  [ main:213 ] - [ DEBUG ]  User entry: "xiaofen"
+2017-02-09 19:50:11  [ main:216 ] - [ DEBUG ]  UGI loginUser:xiaofen (auth:SIMPLE)
+2017-02-09 19:50:11  [ main:384 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:50:11  [ main:385 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:50:11  [ main:385 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:50:11  [ main:385 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:50:11  [ main:401 ] - [ DEBUG ]  No KeyProvider found.
+2017-02-09 19:50:11  [ main:420 ] - [ DEBUG ]  No HA service delegation token found for logical URI hdfs://cluster1:8020
+2017-02-09 19:50:11  [ main:421 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:50:11  [ main:421 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:50:11  [ main:421 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:50:11  [ main:421 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:50:11  [ main:429 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:50:11  [ main:447 ] - [ DEBUG ]  rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@7b227d8d
+2017-02-09 19:50:12  [ main:728 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:50:23  [ main:12333 ] - [ DEBUG ]  Both short-circuit local reads and UNIX domain socket are disabled.
+2017-02-09 19:50:23  [ main:12340 ] - [ DEBUG ]  DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2017-02-09 19:50:23  [ main:12343 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.connect(Job.java:1261)
+2017-02-09 19:50:23  [ main:12349 ] - [ DEBUG ]  Trying ClientProtocolProvider : org.apache.hadoop.mapred.LocalClientProtocolProvider
+2017-02-09 19:50:23  [ main:12357 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-02-09 19:50:23  [ main:12358 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2017-02-09 19:50:23  [ main:12366 ] - [ DEBUG ]  Picked org.apache.hadoop.mapred.LocalClientProtocolProvider as the ClientProtocolProvider
+2017-02-09 19:50:23  [ main:12367 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Cluster.getFileSystem(Cluster.java:161)
+2017-02-09 19:50:23  [ main:12375 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+2017-02-09 19:50:23  [ main:12401 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:50:23  [ main:12402 ] - [ DEBUG ]  Connecting to host218/10.150.27.218:8020
+2017-02-09 19:50:23  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:12521 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen: starting, having connections 1
+2017-02-09 19:50:23  [ IPC Parameter Sending Thread #0:12525 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen sending #0
+2017-02-09 19:50:23  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:12537 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen got value #0
+2017-02-09 19:50:23  [ main:12544 ] - [ INFO ]  Exception while invoking getFileInfo of class ClientNamenodeProtocolTranslatorPB over host218/10.150.27.218:8020. Trying to fail over immediately.
+org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.ipc.StandbyException): Operation category READ is not supported in state standby
+	at org.apache.hadoop.hdfs.server.namenode.ha.StandbyState.checkOperation(StandbyState.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode$NameNodeHAContext.checkOperation(NameNode.java:1719)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkOperation(FSNamesystem.java:1350)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:4132)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getFileInfo(NameNodeRpcServer.java:838)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getFileInfo(ClientNamenodeProtocolServerSideTranslatorPB.java:821)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:962)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2039)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2035)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2033)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1468)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1399)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+	at com.sun.proxy.$Proxy9.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:752)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1988)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1400)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:145)
+	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:562)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:432)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1296)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1293)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1314)
+	at cn.com.zjf.MR_04.Car2.main(Car2.java:41)
+2017-02-09 19:50:23  [ main:12548 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:50:23  [ main:12549 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:50:23  [ main:12549 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:50:23  [ main:12552 ] - [ DEBUG ]  Connecting to host223/10.150.27.223:8020
+2017-02-09 19:50:23  [ IPC Parameter Sending Thread #0:12555 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen sending #0
+2017-02-09 19:50:23  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:12555 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen: starting, having connections 2
+2017-02-09 19:50:23  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:12558 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen got value #0
+2017-02-09 19:50:23  [ main:12558 ] - [ DEBUG ]  Call: getFileInfo took 9ms
+2017-02-09 19:50:23  [ main:12604 ] - [ DEBUG ]  Initialized cache for IDs to User/Group mapping with a  cache timeout of 14400 seconds.
+2017-02-09 19:50:23  [ main:12612 ] - [ DEBUG ]  Configuring job job_local985568045_0001 with file:/data/hadoop/tmp/mapred/staging/xiaofen985568045/.staging/job_local985568045_0001 as the submit dir
+2017-02-09 19:50:23  [ main:12613 ] - [ DEBUG ]  adding the following namenodes' delegation tokens:[hdfs://cluster1:8020]
+2017-02-09 19:50:24  [ main:12800 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-02-09 19:50:24  [ main:12801 ] - [ DEBUG ]  default FileSystem: file:///
+2017-02-09 19:50:24  [ main:12805 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-02-09 19:50:24  [ main:12808 ] - [ DEBUG ]  Creating splits at file:/data/hadoop/tmp/mapred/staging/xiaofen985568045/.staging/job_local985568045_0001
+2017-02-09 19:50:24  [ main:12811 ] - [ INFO ]  Cleaning up the staging area file:/data/hadoop/tmp/mapred/staging/xiaofen985568045/.staging/job_local985568045_0001
+2017-02-09 19:50:24  [ Thread-1:12822 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:50:24  [ Thread-1:12822 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:50:24  [ Thread-1:12823 ] - [ DEBUG ]  removing client from cache: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:50:24  [ Thread-1:12823 ] - [ DEBUG ]  stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@163e4e87
+2017-02-09 19:50:24  [ Thread-1:12823 ] - [ DEBUG ]  Stopping client
+2017-02-09 19:50:24  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:12824 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen: closed
+2017-02-09 19:50:24  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:12824 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen: closed
+2017-02-09 19:50:24  [ IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen:12824 ] - [ DEBUG ]  IPC Client (1074593562) connection to host218/10.150.27.218:8020 from xiaofen: stopped, remaining connections 0
+2017-02-09 19:50:24  [ IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen:12824 ] - [ DEBUG ]  IPC Client (1074593562) connection to host223/10.150.27.223:8020 from xiaofen: stopped, remaining connections 0
+2017-02-09 19:54:02  [ main:0 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:54:02  [ main:17 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:54:02  [ main:18 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, value=[GetGroups], valueName=Time)
+2017-02-09 19:54:02  [ main:20 ] - [ DEBUG ]  UgiMetrics, User and group related metrics
+2017-02-09 19:54:02  [ main:119 ] - [ DEBUG ]  Kerberos krb5 configuration not found, setting default realm to empty
+2017-02-09 19:54:02  [ main:121 ] - [ DEBUG ]   Creating new Groups object
+2017-02-09 19:54:02  [ main:123 ] - [ DEBUG ]  Trying to load the custom-built native-hadoop library...
+2017-02-09 19:54:02  [ main:126 ] - [ DEBUG ]  Loaded the native-hadoop library
+2017-02-09 19:54:02  [ main:128 ] - [ DEBUG ]  Using JniBasedUnixGroupsMapping for Group resolution
+2017-02-09 19:54:02  [ main:128 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMapping
+2017-02-09 19:54:02  [ main:134 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2017-02-09 19:54:02  [ main:141 ] - [ DEBUG ]  hadoop login
+2017-02-09 19:54:02  [ main:142 ] - [ DEBUG ]  hadoop login commit
+2017-02-09 19:54:02  [ main:147 ] - [ DEBUG ]  using local user:NTUserPrincipal: xiaofen
+2017-02-09 19:54:02  [ main:147 ] - [ DEBUG ]  Using user: "NTUserPrincipal: xiaofen" with name xiaofen
+2017-02-09 19:54:02  [ main:147 ] - [ DEBUG ]  User entry: "xiaofen"
+2017-02-09 19:54:02  [ main:150 ] - [ DEBUG ]  UGI loginUser:xiaofen (auth:SIMPLE)
+2017-02-09 19:54:02  [ main:327 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:54:02  [ main:328 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:54:02  [ main:328 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:54:02  [ main:328 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:54:02  [ main:341 ] - [ DEBUG ]  No KeyProvider found.
+2017-02-09 19:54:02  [ main:360 ] - [ DEBUG ]  No HA service delegation token found for logical URI hdfs://cluster1:8020
+2017-02-09 19:54:02  [ main:361 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:54:02  [ main:361 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:54:02  [ main:362 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:54:02  [ main:362 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:54:02  [ main:369 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:54:02  [ main:386 ] - [ DEBUG ]  rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@45018215
+2017-02-09 19:54:02  [ main:638 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:54:14  [ main:12256 ] - [ DEBUG ]  Both short-circuit local reads and UNIX domain socket are disabled.
+2017-02-09 19:54:14  [ main:12266 ] - [ DEBUG ]  DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2017-02-09 19:54:14  [ main:12269 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.connect(Job.java:1261)
+2017-02-09 19:54:14  [ main:12273 ] - [ DEBUG ]  Trying ClientProtocolProvider : org.apache.hadoop.mapred.LocalClientProtocolProvider
+2017-02-09 19:54:14  [ main:12278 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-02-09 19:54:14  [ main:12279 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2017-02-09 19:54:14  [ main:12291 ] - [ DEBUG ]  Picked org.apache.hadoop.mapred.LocalClientProtocolProvider as the ClientProtocolProvider
+2017-02-09 19:54:14  [ main:12293 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Cluster.getFileSystem(Cluster.java:161)
+2017-02-09 19:54:14  [ main:12301 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+2017-02-09 19:54:14  [ main:12329 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:54:14  [ main:12331 ] - [ DEBUG ]  Connecting to host218/10.150.27.218:8020
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12423 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen: starting, having connections 1
+2017-02-09 19:54:14  [ IPC Parameter Sending Thread #0:12427 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen sending #0
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12441 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen got value #0
+2017-02-09 19:54:14  [ main:12454 ] - [ INFO ]  Exception while invoking getFileInfo of class ClientNamenodeProtocolTranslatorPB over host218/10.150.27.218:8020. Trying to fail over immediately.
+org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.ipc.StandbyException): Operation category READ is not supported in state standby
+	at org.apache.hadoop.hdfs.server.namenode.ha.StandbyState.checkOperation(StandbyState.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode$NameNodeHAContext.checkOperation(NameNode.java:1719)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkOperation(FSNamesystem.java:1350)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:4132)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getFileInfo(NameNodeRpcServer.java:838)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getFileInfo(ClientNamenodeProtocolServerSideTranslatorPB.java:821)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:962)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2039)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2035)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2033)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1468)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1399)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+	at com.sun.proxy.$Proxy9.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:752)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1988)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1400)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:145)
+	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:562)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:432)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1296)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1293)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1314)
+	at cn.com.zjf.MR_04.Car2.main(Car2.java:41)
+2017-02-09 19:54:14  [ main:12458 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:54:14  [ main:12459 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:54:14  [ main:12461 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:54:14  [ main:12461 ] - [ DEBUG ]  Connecting to host223/10.150.27.223:8020
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12469 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen: starting, having connections 2
+2017-02-09 19:54:14  [ IPC Parameter Sending Thread #0:12469 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen sending #0
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12473 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen got value #0
+2017-02-09 19:54:14  [ main:12474 ] - [ DEBUG ]  Call: getFileInfo took 13ms
+2017-02-09 19:54:14  [ main:12521 ] - [ DEBUG ]  Initialized cache for IDs to User/Group mapping with a  cache timeout of 14400 seconds.
+2017-02-09 19:54:14  [ main:12527 ] - [ DEBUG ]  Configuring job job_local2052337488_0001 with file:/data/hadoop/tmp/mapred/staging/xiaofen2052337488/.staging/job_local2052337488_0001 as the submit dir
+2017-02-09 19:54:14  [ main:12528 ] - [ DEBUG ]  adding the following namenodes' delegation tokens:[hdfs://cluster1:8020]
+2017-02-09 19:54:14  [ main:12702 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-02-09 19:54:14  [ main:12706 ] - [ DEBUG ]  default FileSystem: file:///
+2017-02-09 19:54:14  [ main:12714 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-02-09 19:54:14  [ main:12717 ] - [ DEBUG ]  Creating splits at file:/data/hadoop/tmp/mapred/staging/xiaofen2052337488/.staging/job_local2052337488_0001
+2017-02-09 19:54:14  [ main:12719 ] - [ INFO ]  Cleaning up the staging area file:/data/hadoop/tmp/mapred/staging/xiaofen2052337488/.staging/job_local2052337488_0001
+2017-02-09 19:54:14  [ Thread-1:12729 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:54:14  [ Thread-1:12730 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:54:14  [ Thread-1:12730 ] - [ DEBUG ]  removing client from cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:54:14  [ Thread-1:12731 ] - [ DEBUG ]  stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:54:14  [ Thread-1:12731 ] - [ DEBUG ]  Stopping client
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12732 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen: closed
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12732 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen: closed
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12732 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen: stopped, remaining connections 0
+2017-02-09 19:54:14  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12732 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen: stopped, remaining connections 0
+2017-02-09 19:55:51  [ main:0 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, about=, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:55:51  [ main:16 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, about=, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time)
+2017-02-09 19:55:51  [ main:17 ] - [ DEBUG ]  field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, sampleName=Ops, about=, type=DEFAULT, value=[GetGroups], valueName=Time)
+2017-02-09 19:55:51  [ main:19 ] - [ DEBUG ]  UgiMetrics, User and group related metrics
+2017-02-09 19:55:51  [ main:117 ] - [ DEBUG ]  Kerberos krb5 configuration not found, setting default realm to empty
+2017-02-09 19:55:51  [ main:120 ] - [ DEBUG ]   Creating new Groups object
+2017-02-09 19:55:51  [ main:123 ] - [ DEBUG ]  Trying to load the custom-built native-hadoop library...
+2017-02-09 19:55:51  [ main:126 ] - [ DEBUG ]  Loaded the native-hadoop library
+2017-02-09 19:55:51  [ main:128 ] - [ DEBUG ]  Using JniBasedUnixGroupsMapping for Group resolution
+2017-02-09 19:55:51  [ main:129 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMapping
+2017-02-09 19:55:51  [ main:135 ] - [ DEBUG ]  Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+2017-02-09 19:55:51  [ main:142 ] - [ DEBUG ]  hadoop login
+2017-02-09 19:55:51  [ main:143 ] - [ DEBUG ]  hadoop login commit
+2017-02-09 19:55:51  [ main:149 ] - [ DEBUG ]  using local user:NTUserPrincipal: xiaofen
+2017-02-09 19:55:51  [ main:149 ] - [ DEBUG ]  Using user: "NTUserPrincipal: xiaofen" with name xiaofen
+2017-02-09 19:55:51  [ main:149 ] - [ DEBUG ]  User entry: "xiaofen"
+2017-02-09 19:55:51  [ main:151 ] - [ DEBUG ]  UGI loginUser:xiaofen (auth:SIMPLE)
+2017-02-09 19:55:51  [ main:344 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:55:51  [ main:345 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:55:51  [ main:345 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:55:51  [ main:345 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:55:51  [ main:358 ] - [ DEBUG ]  No KeyProvider found.
+2017-02-09 19:55:51  [ main:378 ] - [ DEBUG ]  No HA service delegation token found for logical URI hdfs://cluster1:8020
+2017-02-09 19:55:51  [ main:379 ] - [ DEBUG ]  dfs.client.use.legacy.blockreader.local = false
+2017-02-09 19:55:51  [ main:379 ] - [ DEBUG ]  dfs.client.read.shortcircuit = false
+2017-02-09 19:55:51  [ main:379 ] - [ DEBUG ]  dfs.client.domain.socket.data.traffic = false
+2017-02-09 19:55:51  [ main:379 ] - [ DEBUG ]  dfs.domain.socket.path = 
+2017-02-09 19:55:51  [ main:387 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:55:51  [ main:406 ] - [ DEBUG ]  rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@45018215
+2017-02-09 19:55:52  [ main:676 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:56:03  [ main:12282 ] - [ DEBUG ]  Both short-circuit local reads and UNIX domain socket are disabled.
+2017-02-09 19:56:03  [ main:12291 ] - [ DEBUG ]  DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+2017-02-09 19:56:03  [ main:12331 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.connect(Job.java:1261)
+2017-02-09 19:56:03  [ main:12338 ] - [ DEBUG ]  Trying ClientProtocolProvider : org.apache.hadoop.mapred.LocalClientProtocolProvider
+2017-02-09 19:56:03  [ main:12348 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-02-09 19:56:03  [ main:12355 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2017-02-09 19:56:03  [ main:12368 ] - [ DEBUG ]  Picked org.apache.hadoop.mapred.LocalClientProtocolProvider as the ClientProtocolProvider
+2017-02-09 19:56:03  [ main:12374 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Cluster.getFileSystem(Cluster.java:161)
+2017-02-09 19:56:03  [ main:12382 ] - [ DEBUG ]  PrivilegedAction as:xiaofen (auth:SIMPLE) from:org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+2017-02-09 19:56:03  [ main:12419 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:56:03  [ main:12421 ] - [ DEBUG ]  Connecting to host218/10.150.27.218:8020
+2017-02-09 19:56:03  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12574 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen: starting, having connections 1
+2017-02-09 19:56:03  [ IPC Parameter Sending Thread #0:12577 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen sending #0
+2017-02-09 19:56:03  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12589 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen got value #0
+2017-02-09 19:56:03  [ main:12595 ] - [ INFO ]  Exception while invoking getFileInfo of class ClientNamenodeProtocolTranslatorPB over host218/10.150.27.218:8020. Trying to fail over immediately.
+org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.ipc.StandbyException): Operation category READ is not supported in state standby
+	at org.apache.hadoop.hdfs.server.namenode.ha.StandbyState.checkOperation(StandbyState.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode$NameNodeHAContext.checkOperation(NameNode.java:1719)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.checkOperation(FSNamesystem.java:1350)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getFileInfo(FSNamesystem.java:4132)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getFileInfo(NameNodeRpcServer.java:838)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getFileInfo(ClientNamenodeProtocolServerSideTranslatorPB.java:821)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:619)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:962)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2039)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2035)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2033)
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1468)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1399)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:232)
+	at com.sun.proxy.$Proxy9.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getFileInfo(ClientNamenodeProtocolTranslatorPB.java:752)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:187)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getFileInfo(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:1988)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1118)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$18.doCall(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1114)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1400)
+	at org.apache.hadoop.mapreduce.lib.output.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:145)
+	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:562)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:432)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1296)
+	at org.apache.hadoop.mapreduce.Job$10.run(Job.java:1293)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1628)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1293)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1314)
+	at cn.com.zjf.MR_04.Car2.main(Car2.java:44)
+2017-02-09 19:56:03  [ main:12598 ] - [ DEBUG ]  multipleLinearRandomRetry = null
+2017-02-09 19:56:03  [ main:12598 ] - [ DEBUG ]  getting client out of cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:56:03  [ main:12600 ] - [ DEBUG ]  The ping interval is 60000 ms.
+2017-02-09 19:56:03  [ main:12600 ] - [ DEBUG ]  Connecting to host223/10.150.27.223:8020
+2017-02-09 19:56:03  [ IPC Parameter Sending Thread #0:12602 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen sending #0
+2017-02-09 19:56:03  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12602 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen: starting, having connections 2
+2017-02-09 19:56:03  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12605 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen got value #0
+2017-02-09 19:56:03  [ main:12605 ] - [ DEBUG ]  Call: getFileInfo took 6ms
+2017-02-09 19:56:04  [ main:12649 ] - [ DEBUG ]  Initialized cache for IDs to User/Group mapping with a  cache timeout of 14400 seconds.
+2017-02-09 19:56:04  [ main:12667 ] - [ DEBUG ]  Configuring job job_local45867770_0001 with file:/data/hadoop/tmp/mapred/staging/xiaofen45867770/.staging/job_local45867770_0001 as the submit dir
+2017-02-09 19:56:04  [ main:12669 ] - [ DEBUG ]  adding the following namenodes' delegation tokens:[hdfs://cluster1:8020]
+2017-02-09 19:56:04  [ main:12854 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-02-09 19:56:04  [ main:12854 ] - [ DEBUG ]  default FileSystem: file:///
+2017-02-09 19:56:04  [ main:12856 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-02-09 19:56:04  [ main:12858 ] - [ DEBUG ]  Creating splits at file:/data/hadoop/tmp/mapred/staging/xiaofen45867770/.staging/job_local45867770_0001
+2017-02-09 19:56:04  [ main:12860 ] - [ INFO ]  Cleaning up the staging area file:/data/hadoop/tmp/mapred/staging/xiaofen45867770/.staging/job_local45867770_0001
+2017-02-09 19:56:04  [ Thread-1:12875 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:56:04  [ Thread-1:12875 ] - [ DEBUG ]  stopping client from cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:56:04  [ Thread-1:12876 ] - [ DEBUG ]  removing client from cache: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:56:04  [ Thread-1:12876 ] - [ DEBUG ]  stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@419c5f1a
+2017-02-09 19:56:04  [ Thread-1:12876 ] - [ DEBUG ]  Stopping client
+2017-02-09 19:56:04  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12877 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen: closed
+2017-02-09 19:56:04  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12877 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen: closed
+2017-02-09 19:56:04  [ IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen:12878 ] - [ DEBUG ]  IPC Client (1381965390) connection to host218/10.150.27.218:8020 from xiaofen: stopped, remaining connections 0
+2017-02-09 19:56:04  [ IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen:12877 ] - [ DEBUG ]  IPC Client (1381965390) connection to host223/10.150.27.223:8020 from xiaofen: stopped, remaining connections 0
