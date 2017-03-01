@@ -195,7 +195,8 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 		for (Integer item : queue) {
 			sum += item;
 		}
-		int movAvg = sum / windowSize;
+		int avg_cont=queue.size()==windowSize?windowSize:queue.size();
+		int movAvg = sum / avg_cont;
 		mo.write(new Text(String.valueOf((time))), new Text(String.valueOf(movAvg)), cao.getTgsid().toString());
 	}
 
