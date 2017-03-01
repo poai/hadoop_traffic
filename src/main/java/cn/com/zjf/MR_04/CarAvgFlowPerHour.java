@@ -30,15 +30,20 @@ import org.apache.hadoop.mapreduce.lib.output.MultipleOutputs;
 /*移动平均计算每天的0-24点卡口流量移动平均值*/
 public class CarAvgFlowPerHour {
 	public static final String INPUT_DATE_FORMAT = "INPUT_DATE_FORMAT";
-
+	public static final String WINDOW_SIZE = "WINDOW_SIZE";
+	public static final String GRANULARITY_SIZE="GRANULARITY_SIZE";
 	public static void main(String[] args) throws Exception {
-
 		Path input = new Path(args[0]);
 		Path output = new Path(args[1]);
-
 		Configuration conf = new Configuration();
 		// 2000-01-14 01:08:28
 		conf.set(CarAvgFlowPerHour.INPUT_DATE_FORMAT, "yyyy-MM-dd HH:mm:ss");
+		if (args.length >= 3) {
+			conf.set(WINDOW_SIZE, args[2]);
+		}
+		if(args.length>=4){
+			conf.set(GRANULARITY_SIZE, args[3]);
+		}
 		Job job = Job.getInstance(conf, "CarAvgFlowPerHour.java");
 		job.setJarByClass(cn.com.zjf.MR_04.CarAvgFlowPerHour.class);
 
@@ -91,13 +96,16 @@ public class CarAvgFlowPerHour {
 }
 
 class CarAvgFlowMapper extends Mapper<LongWritable, Text, CarAvgOrder, IntWritable> {
-	SimpleDateFormat sdf;
+	private SimpleDateFormat sdf;
+	// 数据统计粒度 N*分钟
+	private Integer granularity = 1;
 
 	@Override
 	protected void setup(Mapper<LongWritable, Text, CarAvgOrder, IntWritable>.Context context)
 			throws IOException, InterruptedException {
 		Configuration conf = context.getConfiguration();
 		String format = conf.get(CarAvgFlowPerHour.INPUT_DATE_FORMAT, "yyyy-mm-dd HH:mm:ss");
+		granularity=conf.getInt(CarAvgFlowPerHour.GRANULARITY_SIZE, 1);
 		sdf = new SimpleDateFormat(format);
 	}
 
@@ -114,7 +122,7 @@ class CarAvgFlowMapper extends Mapper<LongWritable, Text, CarAvgOrder, IntWritab
 				try {
 					Date date = sdf.parse(items[0].substring(9));
 					CarAvgOrder cao = new CarAvgOrder(new Text(items[14].substring(6)),
-							new LongWritable(date.getTime() / 1000 / 60));
+							new LongWritable(date.getTime() / 1000 / (60*granularity)));
 					context.write(cao, base);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -123,22 +131,9 @@ class CarAvgFlowMapper extends Mapper<LongWritable, Text, CarAvgOrder, IntWritab
 		}
 
 	}
-
-	@Override
-	protected void cleanup(Mapper<LongWritable, Text, CarAvgOrder, IntWritable>.Context context)
-			throws IOException, InterruptedException {
-
-	}
 }
 
 class CarAvgFlowCombine extends Reducer<CarAvgOrder, IntWritable, CarAvgOrder, IntWritable> {
-
-	@Override
-	protected void setup(Reducer<CarAvgOrder, IntWritable, CarAvgOrder, IntWritable>.Context context)
-			throws IOException, InterruptedException {
-	}
-
-	//
 	@Override
 	protected void reduce(CarAvgOrder cao, Iterable<IntWritable> values,
 			Reducer<CarAvgOrder, IntWritable, CarAvgOrder, IntWritable>.Context context)
@@ -149,23 +144,15 @@ class CarAvgFlowCombine extends Reducer<CarAvgOrder, IntWritable, CarAvgOrder, I
 		}
 		context.write(cao, new IntWritable(sum));
 	}
-
-	@Override
-	protected void cleanup(Reducer<CarAvgOrder, IntWritable, CarAvgOrder, IntWritable>.Context context)
-			throws IOException, InterruptedException {
-		super.cleanup(context);
-	}
 }
 
 class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 	private MultipleOutputs<Text, Text> mo;
-	// 分钟
-	public Integer granularity = 1;
-	public Integer windowSize = 3;
+	private Integer windowSize = 3;
+	private Integer granularity=1;
+	private Queue<Integer> queue = new LinkedBlockingQueue<Integer>(windowSize + 1);
 
-	public Queue<Integer> queue = new LinkedBlockingQueue<Integer>(windowSize+1);
-
-	SimpleDateFormat sdf;
+	private SimpleDateFormat sdf;
 
 	@Override
 	protected void setup(Reducer<CarAvgOrder, IntWritable, Text, Text>.Context context)
@@ -174,6 +161,8 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 		Configuration conf = context.getConfiguration();
 		String format = conf.get(CarAvgFlowPerHour.INPUT_DATE_FORMAT, "yyyy-mm-dd HH:mm:ss");
 		sdf = new SimpleDateFormat(format);
+		windowSize = conf.getInt(CarAvgFlowPerHour.WINDOW_SIZE, 3);
+		granularity=conf.getInt(CarAvgFlowPerHour.GRANULARITY_SIZE, 1);
 	}
 
 	//
@@ -184,8 +173,7 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 		for (IntWritable lw : values) {
 			sum += lw.get();
 		}
-		String time = sdf.format(new Date(cao.getPassTime().get() * 60 * 1000));
-
+		String time = sdf.format(new Date(cao.getPassTime().get() * 1000* (60*granularity)));
 		// 计算移动平均
 		queue.add(sum);
 		if (queue.size() > windowSize) {
@@ -195,7 +183,7 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 		for (Integer item : queue) {
 			sum += item;
 		}
-		int avg_cont=queue.size()==windowSize?windowSize:queue.size();
+		int avg_cont = queue.size() == windowSize ? windowSize : queue.size();
 		int movAvg = sum / avg_cont;
 		mo.write(new Text(String.valueOf((time))), new Text(String.valueOf(movAvg)), cao.getTgsid().toString());
 	}
@@ -271,6 +259,7 @@ class CarAvgComparator extends WritableComparator {
 		// 指定Key值
 		super(CarAvgOrder.class, true);
 	}
+
 	@SuppressWarnings("rawtypes")
 	@Override
 	public int compare(WritableComparable a, WritableComparable b) {
