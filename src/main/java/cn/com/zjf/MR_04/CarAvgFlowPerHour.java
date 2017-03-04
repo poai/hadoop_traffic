@@ -57,7 +57,6 @@ public class CarAvgFlowPerHour {
 		job.setMapOutputValueClass(IntWritable.class);
 		// partitioner
 		job.setPartitionerClass(CarAvgPartitioner.class);
-		// group no user
 		// job.setGroupingComparatorClass(CarAvgComparator.class);
 		//
 		job.setOutputKeyClass(Text.class);
@@ -84,7 +83,6 @@ public class CarAvgFlowPerHour {
 			}
 		}
 		CombineTextInputFormat.setMaxInputSplitSize(job, 67108864);
-
 		if (fs.exists(output)) {
 			fs.delete(output, true);
 		}
@@ -120,7 +118,9 @@ class CarAvgFlowMapper extends Mapper<LongWritable, Text, CarAvgOrder, IntWritab
 			String[] items = temp.split(",");
 			if (items.length > 10) {
 				try {
+					//过车时间
 					Date date = sdf.parse(items[0].substring(9));
+					//MR二次排序过程中以分钟为最小单元,此处将日期降级至(1分钟*统计粒度),计算结束后进行还原
 					CarAvgOrder cao = new CarAvgOrder(new Text(items[14].substring(6)),
 							new LongWritable(date.getTime() / 1000 / (60*granularity)));
 					context.write(cao, base);
@@ -150,8 +150,7 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 	private MultipleOutputs<Text, Text> mo;
 	private Integer windowSize = 3;
 	private Integer granularity=1;
-	private Queue<Integer> queue = new LinkedBlockingQueue<Integer>(windowSize + 1);
-
+	private Queue<Integer> queue ;
 	private SimpleDateFormat sdf;
 
 	@Override
@@ -163,8 +162,8 @@ class CarAvgFlowReduce extends Reducer<CarAvgOrder, IntWritable, Text, Text> {
 		sdf = new SimpleDateFormat(format);
 		windowSize = conf.getInt(CarAvgFlowPerHour.WINDOW_SIZE, 3);
 		granularity=conf.getInt(CarAvgFlowPerHour.GRANULARITY_SIZE, 1);
+		queue = new LinkedBlockingQueue<Integer>(windowSize + 1);
 	}
-
 	//
 	@Override
 	protected void reduce(CarAvgOrder cao, Iterable<IntWritable> values,
@@ -254,7 +253,6 @@ class CarAvgPartitioner extends Partitioner<CarAvgOrder, LongWritable> {
 }
 
 class CarAvgComparator extends WritableComparator {
-
 	public CarAvgComparator() {
 		// 指定Key值
 		super(CarAvgOrder.class, true);
